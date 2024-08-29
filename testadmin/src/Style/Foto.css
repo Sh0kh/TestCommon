@@ -1,0 +1,271 @@
+.Foto{
+  width: 100%;
+}
+.Foto__main{
+  padding: 10px;
+}
+.header{
+  background-color: black;
+  padding: 20px;
+}
+.header h1{
+  color: white;
+}
+.header__wrapper{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header button{
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border:2px solid white;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.header button:hover{
+  background-color: black;
+  color: white;
+}
+.Table__number{
+  width: 50px;
+  border-left: 3px solid black;
+}
+.Foto__table{
+  width: 100%;
+}
+.Foto__table table{
+  width: 100%;
+}
+.Foto__table table tbody h3{
+  text-align: center;
+  
+}
+.Table__setting{
+  margin: 0 auto;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Foto__table table thead{
+  background-color: black;
+  /* border-radius: 10px; */
+}
+.Foto__table table thead h3{
+  color: white;
+  padding: 20px;
+}
+.Foto__table table tbody td{
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+.Table__setting button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.Table__setting button svg{
+  color: black;
+  font-size: 30px;
+  transition: 0.5s;
+}
+.Table__setting button svg:hover{
+  color: red;
+}
+.modal{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.697);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-160%);
+transition: all 1.2s ease;
+  z-index: 11;
+}
+.modal__active{
+  transform: translateY(0);
+}
+.modal__content{
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.modal__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal__header button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+form{
+  margin-top: 20px;
+}
+form label{
+  width: 100%;
+}
+form label input{
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+
+}
+form button{
+  width: 100%;
+  padding: 10px 20px;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+form button:hover{
+  background-color: transparent;
+  color: black;
+}
+.form-grid label input {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 15px;
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 10px;
+  background-color: #0000003B;
+  outline: none;
+  color: white;
+}
+
+.form-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.inp-number {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.modal-foto label {
+  width: 100%
+}
+
+.modal-foto {
+  width: 100%;
+}
+
+.file-input-container {
+  width: 100%;
+}
+.file-input-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: black;
+  cursor: pointer;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.file-input-container input[type=file] {
+  cursor: pointer;
+  position: absolute;
+  font-size: 100px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.file-input-container span {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+.file-input-container:hover {
+  background-color: transparent;
+  color: black !important;
+  cursor: pointer;
+  .sl{
+    color: black;
+  }
+}
+.Btn_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.defBtn{
+  padding: 10px 20px;
+  border-radius: 16px;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.activeBtn{
+  padding: 10px 20px;
+  border-radius: 16px;
+  background-color: rgb(14, 185, 14);
+  color: white;
+  border: 2px solid rgb(14, 185, 14);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.Btn_wrapper button:hover{
+  background-color: transparent;
+  color: black;
+}
+.Modal__wrapper{
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6,1fr);
+}
+.modal__content select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.modal__content label{
+  margin-bottom: 10px;
+  display: block;
+}
+@media(max-width:650px){
+  .Foto__table{
+  overflow-x: scroll;
+  }
+  .Foto__table table{
+      width: 650px;
+  }
+  .modal__content{
+      width: 90% !important;
+  }
+}

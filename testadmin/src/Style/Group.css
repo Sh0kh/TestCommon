@@ -1,0 +1,228 @@
+.Group{
+    width: 100%;
+    /* margin-left: 350px; */
+}
+.Group__main{
+    padding: 10px;
+}
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border:2px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.header button:hover{
+    background-color: black;
+    color: white;
+}
+.header__burger{
+    font-size: 25px;
+    padding: 5px !important;
+    display: none;
+}
+.header__grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.Table__number{
+    width: 50px;
+    border-left: 3px solid black;
+}
+.Group__table{
+    width: 100%;
+}
+.Group__table table{
+    width: 100%;
+}
+.Group__table table tbody h3{
+    text-align: center;
+    
+}
+.Table__setting{
+    margin: 0 auto;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Group__table table thead{
+    background-color: black;
+    /* border-radius: 10px; */
+}
+.Group__table table thead h3{
+    color: white;
+    padding: 20px;
+}
+.Group__table table tbody td{
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.Table__setting button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.Table__setting button svg{
+    color: black;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.Table__setting button svg:hover{
+    color: red;
+}
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.697);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-160%);
+	transition: all 1.2s ease;
+    z-index: 11;
+}
+.modal__active{
+    transform: translateY(0);
+}
+.modal__content{
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.modal__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal__header button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+form{
+    margin-top: 20px;
+}
+form label{
+    width: 100%;
+}
+form label input{
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 10px;
+
+}
+form button{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+form button:hover{
+    background-color: transparent;
+    color: black;
+}
+.Delete__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.Delete__modal{
+    width: 20%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+}
+.Delete__wrapper button{
+    padding: 10px 20px;
+    border-radius: 16px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Delete__wrapper button:hover{
+    background-color: transparent;
+    color: black;
+}
+.Footer{
+    padding: 20px;
+}
+.Footer__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Footer button{
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 16px;
+    border: 2px solid black;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Footer button:hover{
+    background-color: transparent;
+    color: black;
+}
+.Footer span{
+    font-size: 20px;
+}
+.btn-disabled {
+    background-color: #a19f9f !important; /* Цвет кнопки, если она отключена (первая страница) */
+  }
+  
+  .btn-dark {
+    background-color: #a19f9f !important; /* Цвет кнопки, если это последняя страница */
+  }
+  @media(max-width:1200px){
+    .header__burger{
+        display: block;
+    }
+  }
+@media(max-width:1090px){
+    .Delete__modal{
+        width: 50%;
+    }
+}
+@media(max-width:850px){
+    .Group__table{
+    overflow-x: scroll;
+    }
+    .Group__table table{
+        width: 950px;
+    }
+    .modal__content{
+        width: 90% !important;
+    }
+}
+@media(max-width:490px){
+    .Delete__modal{
+        width: 95%;
+    }
+}

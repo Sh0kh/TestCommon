@@ -1,0 +1,29 @@
+header{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 10px   ;
+}
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.header__wrapper a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    background-color: black;
+    padding:5px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: 0.5s;
+    width: 200px;
+}
+.header__wrapper a:hover{
+    background-color: transparent;
+    color: black;
+}
+.active_page{
+    background-color:transparent !important;
+}

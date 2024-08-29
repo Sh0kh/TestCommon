@@ -1,0 +1,175 @@
+.Result{
+    width: 100%;
+    padding: 0 15px;
+}
+.Result__wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+form input{
+    width: 200px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+ form button{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    background-color: black;
+    padding:5px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: 0.5s;
+    display: block;
+    margin: 0 auto;
+    margin-top:10px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: transparent;
+    color: black;
+}
+.Result__table{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.Result__table table{
+    width: 100%;
+}
+.Result__table table th{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-left: 2px solid white;
+}
+.Result__table table thead tr{
+    background-color: black;
+}
+.Result__table table tbody td{
+    text-align: center;
+    padding: 5px ;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+.Result__table__number{
+    width: 50px;
+}
+.Result__table table tbody tr{
+    border-bottom: 2px solid black;
+}
+.Result__group{
+    margin-top: 50px;
+}
+.Result__group h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.Result__group ul{
+    margin-top: 20px;
+    text-align: center;
+}
+.Result__group ul li {
+    font-size: 20px;
+}
+.Result__Table__wrapper{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Res__flex{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.Result__Table__wrapper h2{
+    font-weight: bold;
+}
+.Result__Item{
+    padding: 0px 10px;
+    padding-bottom: 30px;
+}
+.Result__history{
+    margin-top: 30px;
+}
+.Result__history__wrapper{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+}
+.Result__history__card{
+    cursor: pointer;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius:12px;
+}
+.Result__history__card__felx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Result__group__card{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+.Result__group span{
+    display: block;
+}
+.Result__group__card h3{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.Result__group__Wrapper{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+}
+.res{
+    margin-top: 50px;
+}
+@media(max-width:1050px){
+    .Result__table{
+        width: 100%;
+    }
+}
+@media(max-width:835px){
+    .Result__history__wrapper{
+        gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .Result__history__card{
+        padding: 8px;
+    }
+    .Result__group__Wrapper{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(max-width:430px){
+    .Result__history__wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Result__group__Wrapper{
+        gap: 10px;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:400px){
+    .Result__table table thead h3{
+        font-size: 12px;
+    }
+    .Result__table table tbody h3{
+        font-size: 12px;
+    }
+    .Result__group h2{
+        font-size: 25px;
+    }
+}

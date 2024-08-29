@@ -1,0 +1,20 @@
+.Home{
+width: 100%;
+}
+.Home__wrapper{
+    display: flex;
+    gap: 1px;
+    width: 100%;
+}
+.Out{
+    margin-left: 300px;
+    width: 100%;
+}
+@media(max-width:1200px){
+    .Home__wrapper{
+        flex-direction: column;
+    }
+    .Out{
+        margin-left: 0;
+    }
+}
