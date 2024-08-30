@@ -3,6 +3,7 @@ import '../Style/Test.css';
 import { gql, useQuery, useMutation } from '@apollo/client';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 // Запрос на получение данных коллекции
 const GET_COLLECTION = gql`
  query{
@@ -26,7 +27,6 @@ const CREATE_STUDENT_ANSWER = gql`
 `;
 
 function Test1() {
-
   const showSuccessToast = () => {
     toast.success('Good!', {
       position: "top-right",
@@ -40,7 +40,6 @@ function Test1() {
     });
   };
 
-
   const showErrorToast = () => {
     toast.error('Error!', {
       position: "top-right",
@@ -53,6 +52,7 @@ function Test1() {
       theme: "colored",
     });
   };
+
   const { data: Collection, loading, error } = useQuery(GET_COLLECTION);
   const [inputs, setInputs] = useState({});
   const [code, setCode] = useState('');
@@ -103,6 +103,13 @@ function Test1() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    const collectionId = Collection?.getCollectionActive?.id;
+
+    if (!collectionId) {
+      showErrorToast();
+      return;
+    }
+
     // Определяем общее количество инпутов, чтобы даже пустые поля отправлялись
     const totalInputs = (Collection?.getCollectionActive?.questions.match(/\[qazwsxedc\]/g) || []).length;
 
@@ -112,20 +119,20 @@ function Test1() {
     try {
       const { data } = await createStudentAnswer({
         variables: {
-          collectionId: 1,
+          collectionId: collectionId,  // Используем id из getCollectionActive
           answers,
           code,
         },
       });
       if (data.createStudentAnswer.statusCode === 200) {
-        showSuccessToast()
+        showSuccessToast();
         setInputs({});
         setCode('');
       } else {
-       showErrorToast()
+        showErrorToast();
       }
     } catch (error) {
-      showErrorToast()
+      showErrorToast();
       console.error('error', error);
     }
   };
@@ -143,8 +150,8 @@ function Test1() {
       <div className="Test__code">
         <form onSubmit={handleFormSubmit}>
           <h3 className='bot'>
-          To get a 10-minute key from the  <a href="https://t.me/codevanbot" target="_blank" rel="noopener noreferrer">
-          @codevanbot</a>  on Telegram
+            To get a 10-minute key from the  <a href="https://t.me/codevanbot" target="_blank" rel="noopener noreferrer">
+            @codevanbot</a>  on Telegram
           </h3>
           <label>
             <input
