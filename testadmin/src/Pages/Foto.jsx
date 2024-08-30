@@ -317,6 +317,7 @@ function Foto() {
                       <label>
                         <h3>Input {index + 1}:</h3>
                         <input
+                        required
                           type="text"
                           value={input}
                           onChange={(event) => handleDynamicInputChange(index, event)}
