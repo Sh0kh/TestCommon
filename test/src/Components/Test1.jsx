@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Style/Test.css';
 import { gql, useQuery, useMutation } from '@apollo/client';
 import { ToastContainer, toast } from 'react-toastify';
@@ -58,12 +58,23 @@ function Test1() {
   const [code, setCode] = useState('');
   const [createStudentAnswer] = useMutation(CREATE_STUDENT_ANSWER);
 
+  // Load inputs from localStorage on component mount
+  useEffect(() => {
+    const savedInputs = JSON.parse(localStorage.getItem('inputs'));
+    if (savedInputs) {
+      setInputs(savedInputs);
+    }
+  }, []);
+
   // Обработка изменений в инпутах
   const handleInputChange = (e, index) => {
-    setInputs((prev) => ({
-      ...prev,
+    const newInputs = {
+      ...inputs,
       [index]: e.target.value,
-    }));
+    };
+
+    setInputs(newInputs);
+    localStorage.setItem('inputs', JSON.stringify(newInputs)); // Save inputs to localStorage
   };
 
   // Функция для парсинга текста с инпутами
@@ -128,6 +139,7 @@ function Test1() {
         showSuccessToast();
         setInputs({});
         setCode('');
+        localStorage.removeItem('inputs'); // Clear localStorage after submission
       } else {
         showErrorToast();
       }
