@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:18 AS build
 
 WORKDIR /app
 
@@ -8,6 +8,10 @@ RUN npm install
 
 COPY test/ .
 
-CMD ["node", "build/index.js"]
+RUN npm run build
+
+
+COPY --from=build /app/build /usr/share/nginx/html
 
 EXPOSE 80
+
