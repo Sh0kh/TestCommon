@@ -1,4 +1,4 @@
 import axios from 'axios' 
-axios.defaults.baseURL = 'http://204.48.28.153:8080'
+axios.defaults.baseURL = 'https://backend.camelot-register.uz/query'
 
 export default axios
